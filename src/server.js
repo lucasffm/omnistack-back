@@ -32,6 +32,6 @@ app.use('/files', express.static(path.resolve(__dirname, '..', 'tmp')));
 
 app.use('/api/v1', require('./routes'));
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('*** Servidor rodando ***');
 });
